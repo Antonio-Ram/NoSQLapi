@@ -1,4 +1,4 @@
-const router = require('express').Router();
+/*const router = require('express').Router();
 const {
     addFriend,
     removeFriend
@@ -10,4 +10,4 @@ router
 .post(addFriend)
 .delete(removeFriend);
 
-module.exports = router;
+module.exports = router;*/

@@ -1,4 +1,4 @@
-const { User } = require('../models');
+/*const { User } = require('../models');
 
 const friendController = {
     addFriend({ params, body }, res) {
@@ -28,4 +28,4 @@ const friendController = {
     }
 }
 
-module.exports = friendController;
+module.exports = friendController;*/
