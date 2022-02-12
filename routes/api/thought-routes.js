@@ -11,10 +11,11 @@ router.route('/').get(getAllThoughts)
 
 // api/thoughts/(userId)
 router.route('/:userId')
-.get(getThoughtById)
 .post(addThought);
 
 // api/thoughts/(userId)/(thoughtId)
-router.route('/:userId/:thoughtId').delete(removeThought);
+router.route('/:userId/:thoughtId')
+.get(getThoughtById)
+.delete(removeThought);
 
 module.exports = router;
