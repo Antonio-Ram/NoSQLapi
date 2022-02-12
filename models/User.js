@@ -13,9 +13,24 @@ const UserSchema = new Schema ({
         unique: true
         //validation
     },
-    thoughts: [],
+    thoughts: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Thought'
+        }
+    ],
     friends: [],
-})
+},
+{
+    toJSON: {
+            virtuals: true,
+        },
+        id: false
+});
+
+UserSchema.virtual('thoughtCount').get(function() {
+    return this.thoughts.length;
+});
 
 const User = model ('User', UserSchema);
 
